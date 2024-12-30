@@ -33,7 +33,7 @@ export default function Home() {
 	}, [session?.accessToken, setError, setUser, error, setLoading]);
 
 	return (
-		<div className="flex flex-col items-center justify-center p-4">
+		<div className="flex flex-col items-center justify-center p-6">
 			<p>App dashboard</p>
 			{error ? <p>Some thing went wrong</p> : null}
 			{user && !isLoading ? (
