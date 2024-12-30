@@ -28,7 +28,6 @@ export default withAuth(async function middleware(req: NextRequest) {
     isPublicRoute && token &&
     !req.nextUrl.pathname.startsWith('/')
   ) {
-
     return NextResponse.redirect(new URL('/', req.nextUrl))
   }
 
@@ -36,9 +35,6 @@ export default withAuth(async function middleware(req: NextRequest) {
 }, {
   callbacks: {
     async authorized() {
-      // This is a work-around for handling redirect on auth pages.
-      // We return true here so that the middleware function above
-      // is always called.
       return true;
     },
   },
