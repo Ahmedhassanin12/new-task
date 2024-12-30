@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
 
-First, run the development server:
+## Task Description
+The objective of this task is to implement a login form based on a provided Figma design and integrate it with a backend API. Upon successful authentication, the user will be redirected to a simple dashboard with a logout option.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Requirements
+1. **Login Page**:
+   - Includes email and password fields.
+   - Implements validation:
+     - Both fields must be filled.
+     - Email must be in a valid format.
+   - The login button is disabled until validations pass.
+   - Integrates with the login API to authenticate users.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. **Dashboard**:
+   - Displays the user's ID and name fetched from the API.
+   - Includes a logout button to terminate the session.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. **Logout**:
+   - Clears authentication and redirects the user back to the login page.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### API Integration
+- **Login API**:
+  - URL: `url`
+  - Method: POST
+  - Body: `{email: <Email>, password: <Password>, isEmployee: true}`
 
-## Learn More
+- **User Info API**:
+  - URL: `https://api-yeshtery.dev.meetusvr.com/v1/user/info`
+  - Method: GET
+  - Authorization: Bearer token from login response.
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
+
+
