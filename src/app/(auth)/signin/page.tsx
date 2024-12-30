@@ -47,13 +47,13 @@ export default function SignUp() {
 		}
 	};
 
-	const [showPassword, setShowPassword] = useState(false);
+	const [showPassword] = useState(false);
 
-	const handleClickShowPassword = () => setShowPassword((show) => !show);
+	// const handleClickShowPassword = () => setShowPassword((show) => !show);
 
-	const handleMouseDownPassword = (event: MouseEvent<HTMLButtonElement>) => {
-		event.preventDefault();
-	};
+	// const handleMouseDownPassword = (event: MouseEvent<HTMLButtonElement>) => {
+	// 	event.preventDefault();
+	// };
 
 	return (
 		<main
