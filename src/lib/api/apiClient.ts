@@ -1,4 +1,4 @@
-import axios, { isAxiosError, type AxiosResponse } from "axios";
+import axios from "axios";
 
 
 export const ApiClient = axios.create({

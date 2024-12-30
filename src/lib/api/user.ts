@@ -13,6 +13,6 @@ export const userInfo = async (accessToken: string | null | undefined): Promise<
     })
     return [res.data, null]
   } catch (error) {
-    return [null, error as Error]
+    return [null, error]
   }
 }

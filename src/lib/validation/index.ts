@@ -1,11 +1,11 @@
 import * as z from "zod";
 
-const passwordSchema = z
-  .string()
-  .refine((password) => /^(?=.*[A-Z])(?=.*[!@#$&*]).{8,}$/.test(password), {
-    message:
-      "Password must be at least 8 characters long, contain 1 uppercase letter, and 1 special character (!@#$&*)",
-  });
+// const passwordSchema = z
+//   .string()
+//   .refine((password) => /^(?=.*[A-Z])(?=.*[!@#$&*]).{8,}$/.test(password), {
+//     message:
+//       "Password must be at least 8 characters long, contain 1 uppercase letter, and 1 special character (!@#$&*)",
+//   });
 
 
 // ============================================================

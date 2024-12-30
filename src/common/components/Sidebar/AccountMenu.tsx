@@ -1,4 +1,4 @@
-import { Box, Button } from "@mui/material";
+import { Avatar, Box, Button } from "@mui/material";
 import { useSession } from "next-auth/react";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
@@ -24,12 +24,9 @@ export function AccountMenu() {
 					px: 1,
 				}}
 			>
-				<img
-					className="size-8 rounded shrink-0 shadow"
+				<Avatar
 					src={"https://api.dicebear.com/9.x/adventurer/svg?=dee"}
 					alt="Avatar"
-					width={"40px"}
-					height={"40px"}
 				/>
 				<Box
 					sx={{

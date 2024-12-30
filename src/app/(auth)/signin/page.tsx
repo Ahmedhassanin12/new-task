@@ -2,10 +2,9 @@
 import { SignInValidationSchema } from "@/lib/validation";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { CircularProgress } from "@mui/material";
-import { signIn, signOut, useSession } from "next-auth/react";
-import Link from "next/link";
+import { signIn } from "next-auth/react";
 import { useRouter, useSearchParams } from "next/navigation";
-import { type MouseEvent, useEffect, useState } from "react";
+import { type MouseEvent, useState } from "react";
 import { useForm } from "react-hook-form";
 import type { z } from "zod";
 
@@ -14,7 +13,6 @@ export default function SignUp() {
 	const [requestSuccess, setRequestSuccess] = useState<string | undefined>();
 	const [requestError, setRequestError] = useState<string | undefined>();
 	const searchParams = useSearchParams();
-	const { data: session } = useSession();
 	const router = useRouter();
 
 	const form = useForm<FormValues>({

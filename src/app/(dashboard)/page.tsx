@@ -1,7 +1,7 @@
 "use client";
 import { userInfo } from "@/lib/api/user";
 import { useSession } from "next-auth/react";
-import { useCallback, useEffect } from "react";
+import { useEffect } from "react";
 import { useStore } from "@/common/store/store";
 import { CircularProgress } from "@mui/material";
 
